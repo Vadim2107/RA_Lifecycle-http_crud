@@ -17,7 +17,7 @@
     color: green;
 }
 
-textarea {
+textarea, .note-content {
     border: solid 1px black;
 }
 
@@ -65,17 +65,22 @@ textarea {
     cursor: pointer;
 }
 
+svg {
+    width: 20px;
+    height: 20px;
+}
+
 form {
     display: flex;
 }
 
-.form {
+/* .form {
     
 }
 
 .form-title {
 
-}
+} */
 
 .form-content {
     min-width: 350px;

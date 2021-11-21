@@ -9,10 +9,8 @@ class NoteItem extends React.Component {
     }
 
     componentDidMount() {
-        fetch(process.env.REACT_APP_NOTES_URL)
-        // fetch(process.env.REACT_APP_PORT)
-        .then(response => response.json())
-        .then(notes => console.log(notes[0].title));
+        fetch(process.env.REACT_APP_PORT)
+        .then(response => response.json());
     }
 
     render() {
@@ -20,12 +18,12 @@ class NoteItem extends React.Component {
             <div className="notes">
                 {this.props.items.map(item =>
                     <div className="note-container" key={item.id}>
-                        <textarea className="note-content">{item.title}</textarea>  
+                        <div className="note-content">{item.title}</div>  
                         <ButtonDel onRemove={() => this.props.onRemove(item.id)} />
                     </div>
                 )}
             </div>
-            
+
         )
     }
 }
