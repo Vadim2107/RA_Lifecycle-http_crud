@@ -1,7 +1,6 @@
 import React from 'react';
 import ButtonDel from './ButtonDel';
 
-// function NoteItem(props)  {
 class NoteItem extends React.Component {
     constructor(props) {
         super(props);
